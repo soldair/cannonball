@@ -1,0 +1,42 @@
+{
+  "name": "cannonball",
+  "version": "1.0.0",
+  "description": "web/control ui for a cannon web cam.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "start": "npm run build && ./bin/server.js start -s ./fake.socket",
+    "build": "browserify ./browser/index.js -o ./static/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soldair/cannonball.git"
+  },
+  "keywords": [
+    "camera",
+    "pirates",
+    "cannon",
+    "webcam"
+  ],
+  "bin": {
+    "cannonball": "./bin/server.js"
+  },
+  "author": "Ryan Day <soldair@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soldair/cannonball/issues"
+  },
+  "homepage": "https://github.com/soldair/cannonball#readme",
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "tape": "^4.2.2"
+  },
+  "dependencies": {
+    "duplexer2": "^0.1.2",
+    "ecstatic": "^1.1.3",
+    "end-of-stream": "^1.1.0",
+    "hyperquest": "^1.2.0",
+    "through2": "^2.0.0",
+    "yargs": "^3.29.0"
+  }
+}
